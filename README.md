@@ -2,6 +2,11 @@
 
 A full-stack MERN application that allows users to test their technical knowledge through an interactive quiz interface. Built with React, MongoDB, Express.js, and Node.js, featuring comprehensive testing with Cypress.
 
+## Links
+
+- [View Tech Quiz Walkthrough Video](https://youtu.be/pHXyQIACl0g)
+- [GitHub Repository](https://github.com/dgoldenthal/My-Tech-Quiz-Test)
+
 ## Features
 
 - Random quiz questions from a MongoDB database
@@ -13,15 +18,13 @@ A full-stack MERN application that allows users to test their technical knowledg
 
 ## Application Demo
 
-[View Walkthrough Video](https://drive.google.com/file/d/xxx/view)
-
-> - Note: In this video, I demonstrate:
-> - Application setup and installation
-> - Running the development environment
-> - Component testing with Cypress
-> - End-to-end testing with Cypress
-> - Complete quiz functionality
-> - Database seeding and configuration
+The walkthrough video demonstrates:
+- Application setup and installation
+- Running the development environment
+- Component testing with Cypress
+- End-to-end testing with Cypress
+- Complete quiz functionality
+- Database seeding and configuration
 
 ## Technologies Used
 
@@ -42,8 +45,8 @@ A full-stack MERN application that allows users to test their technical knowledg
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd tech-quiz
+git clone https://github.com/dgoldenthal/My-Tech-Quiz-Test.git
+cd My-Tech-Quiz-Test
 ```
 
 2. Install dependencies:
@@ -111,7 +114,13 @@ npm run cy:open
 ├── cypress/               # Cypress tests
 │   ├── component/         # Component tests
 │   ├── e2e/              # End-to-end tests
-│   └── fixtures/         # Test fixtures
+│   ├── fixtures/         # Test fixtures
+│   ├── support/          # Test support files
+│   │   ├── component.ts  # Component test configuration
+│   │   ├── component-index.html  # Component test template
+│   │   ├── commands.ts   # Custom commands
+│   │   └── e2e.ts       # E2E test configuration
+│   └── tsconfig.json     # TypeScript config for tests
 ├── server/               # Express backend
 │   ├── src/
 │   │   ├── config/       # Database configuration
@@ -120,7 +129,9 @@ npm run cy:open
 │   │   ├── routes/       # API routes
 │   │   └── seeds/        # Database seeds
 │   └── package.json
-└── package.json
+├── package.json          # Root package.json
+├── cypress.config.ts     # Cypress configuration
+└── tsconfig.json        # Root TypeScript configuration
 ```
 
 ## API Endpoints
@@ -158,3 +169,7 @@ THEN I can start a new quiz
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## License
+
+This project is licensed under the ISC License - see the `package.json` file for details.

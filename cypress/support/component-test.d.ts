@@ -1,7 +1,6 @@
+import 'cypress';
 import { mount } from 'cypress/react18'
 
-// Augment the Cypress namespace to include type definitions for
-// your custom command.
 declare global {
   namespace Cypress {
     interface Chainable {
@@ -9,5 +8,3 @@ declare global {
     }
   }
 }
-
-Cypress.Commands.add('mount', mount)
